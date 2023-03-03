@@ -1,0 +1,26 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Informācijas daudzuma mērvienības</h1>
+        <form style="background-color: yellow">
+         <p><input type = “text” id = "numberToCalc"> <label>GB=</label></p>
+         <p><input type="button" value="Izteikt megabiatos" onclick="convertToMB()"></button> <input type = “text” id="outputMB"> <label>MB</label></p>
+         <p><button type="button">Izteikt mimibaitos</button> <input type = “text” id="outputMiB"> <label>MiB</label></p>
+        </form>
+        <script>
+            function convertToMB(){
+                var a = document.getElementById('numberToCalc').value;
+                document.getElementById('outputMB').value = a * 1000;
+                }
+            function convertToMib(){
+                var a = document.getElementById('numberToCalc').value;
+                document.getElementById('outputMiB').value = a * 1000 * 1.048576;
+                }
+        </script>
+    </body>
+</html>
