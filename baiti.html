@@ -1,0 +1,32 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        form {
+  border:1px solid black;
+}
+    </style>
+    <script>
+        function MbpsToKiB(){
+            var a = document.getElementById('toCalc').value;
+            document.getElementById('Calced').value = a*25 * 8;
+            }
+        function MbpsToKB(){
+            var a = document.getElementById('toCalc').value;
+            document.getElementById('Calced').value = a*25 * 1000; 
+            }
+    </script>
+    <body>
+        <form>
+            <div>Aprēķināt cik daudz informācijas var lejuplādēt</div>
+            <input type = “text” id = "toCalc"> <label>sekundēs, ja interneta ātrums ir 25 Mbps.</label>
+            <div>Atbilde</div>
+            <input type = “text” id = "Calced" disabled>
+            <input type="radio" id="KiB" name="KiB" value="KiB" onclick="MbpsToKiB()"><label for="KiB">KiB</label><br><input type="radio" id="KB" name="KB" value="KB" onclick="MbpsToKB()"><label for="KB">KB</label><br>
+        </form>
+    </body>
+</html>
